@@ -69,6 +69,14 @@ int summeRekursiv2(int n){
     return sum;
 }
 
+int fakultät(int n){
+    for(int i = n - 1; i > 0; i--){
+        n *= i;
+    }
+    printf("%d\n", n);
+    return n;
+}
+
 int main() {
 
 
@@ -79,6 +87,7 @@ int main() {
     //newDown(5);
     //summeRekursiv(5);
     //printf("%d\n", sum);
-    summeRekursiv2(5);
+    //summeRekursiv2(5);
+    //fakultät(5);
     return 0;
 }
