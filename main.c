@@ -39,15 +39,46 @@ void down(int n)
 // unendlich
 
 void newDown(int n){
-    printf("%d", n);
+    if(n == 0) {
+        return;
+    }
+    else{
         newDown(n - 1);
+    }
+    printf("%d\n", n);
+}
+/*
+int sum = 0;
+void summeRekursiv(int n){
+    if(n > 0){
+        sum = sum + n;
+        summeRekursiv(n - 1);
+    }
+}
+*/
+
+int summeRekursiv2(int n){
+    int sum;
+    if(n == 1){
+        sum = 1;
+    }
+    else{
+        sum = n + summeRekursiv2(n - 1);
+    }
+    printf("%d\n", sum);
+    return sum;
 }
 
 int main() {
+
+
     //aufg1();
     //aufg2();
     //umsatzrerchner();
     //down(5);
-    newDown(5);
+    //newDown(5);
+    //summeRekursiv(5);
+    //printf("%d\n", sum);
+    summeRekursiv2(5);
     return 0;
 }
