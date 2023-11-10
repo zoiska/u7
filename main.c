@@ -3,13 +3,12 @@
 void aufg1(){
     char name[30];
     printf("Wie heißt du?\n");
-    scanf("%19[^\n]", &name);
+    scanf("%s", &name);
     printf("Hallo %s.\n", name);
 }
 
 void aufg2(){
-    double verpr;
-    double kost;
+    double verpr, kost;
     double prozsatz = 0;
     printf("Verkaufspreis: ");
     scanf("%lf", &verpr);
@@ -17,8 +16,8 @@ void aufg2(){
     scanf("%lf", &kost);
     printf("Prozentsatz: ");
     scanf("%lf", &prozsatz);
-    double prov = prozsatz * (verpr - kost);
-    printf("Die Provision beträgt %lf", prov);
+    double prov = (prozsatz / 100) * (verpr - kost);
+    printf("Die Provision beträgt %.2f", prov);
 }
 
 void umsatzrerchner(){
@@ -47,6 +46,7 @@ void newDown(int n){
     }
     printf("%d\n", n);
 }
+
 /*
 int sum = 0;
 void summeRekursiv(int n){
@@ -85,7 +85,7 @@ int main() {
     //umsatzrerchner();
     //down(5);
     //newDown(5);
-    //summeRekursiv(5);
+    //summeRekursiv(9);
     //printf("%d\n", sum);
     //summeRekursiv2(5);
     //fakultät(5);
